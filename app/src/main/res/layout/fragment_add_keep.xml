@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.keep.AddKeepFragment">
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Keep Title"
+        tools:ignore="MissingPrefix" />
+
+
+    <EditText
+        android:padding="10dp"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_border"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textSize="14sp"
+        android:textColor="#000000"
+        android:id="@+id/et_title"
+        android:textColorHint="#a4a8ad"/>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Keep Description"
+        tools:ignore="MissingPrefix" />
+
+
+    <EditText
+        android:padding="10dp"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_border"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textSize="14sp"
+        android:textColor="#000000"
+        android:id="@+id/et_description"
+        android:textColorHint="#a4a8ad"/>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Task date"
+        tools:ignore="MissingPrefix" />
+
+    <EditText
+        android:textSize="14sp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:singleLine="true"
+        android:background="@drawable/btn_border"
+        android:padding="10dp"
+        android:id="@+id/taskDate"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Task time"
+        tools:ignore="MissingPrefix" />
+
+    <EditText
+        android:textSize="14sp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="20dp"
+
+        android:singleLine="true"
+        android:background="@drawable/btn_border"
+        android:padding="10dp"
+        android:id="@+id/taskTime"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Add an event"
+        tools:ignore="MissingPrefix" />
+
+    <EditText
+        android:textSize="14sp"
+        fontPath="fonts/nunito_light.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/btn_border"
+        android:padding="10dp"
+        android:id="@+id/taskEvent"
+        tools:ignore="MissingPrefix" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addTask"
+        android:text="Add task"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/btn_background"
+         android:layout_marginTop="40dp" />
+
+
+</LinearLayout>

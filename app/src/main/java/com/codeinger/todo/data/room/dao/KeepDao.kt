@@ -16,9 +16,12 @@ interface KeepDao {
     @Delete
     suspend fun deleteKeep(keep: Keep)
 
-    @Query("DELETE FROM keep_table")
+    @Query("DELETE FROM Keep")
     suspend fun deleteAllKeeps(): Int
 
-    @Query("SELECT * FROM keep_table ORDER BY kid ASC")
+    @Query("SELECT * FROM Keep Where Cid =:Cid")
+    fun getAllParticularKeep (Cid : Int)
+
+    @Query("SELECT * FROM Keep ORDER BY kid ASC")
     fun readAllData(): LiveData<List<Keep>>
 }

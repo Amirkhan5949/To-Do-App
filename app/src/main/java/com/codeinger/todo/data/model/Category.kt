@@ -4,12 +4,13 @@ import android.graphics.Bitmap
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "category_table")
+@Entity
 data class Category(
 
     @PrimaryKey(autoGenerate = false)
     var Cid : Int,
     var name : String,
-     var img : Bitmap
+    var description : String
+//     var img : Bitmap
 
 )

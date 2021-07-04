@@ -15,7 +15,7 @@ class CategoryViewmodel @Inject constructor(var categoryRepository: CategoryRepo
     val readAllData: LiveData<List<Category>> = categoryRepository.readAllData
 
 
-    fun insertCategoryName(category: Category){
+    fun insertCategory(category: Category){
         viewModelScope.launch(Dispatchers.IO) {
             categoryRepository.insertCategoryName(category)
         }

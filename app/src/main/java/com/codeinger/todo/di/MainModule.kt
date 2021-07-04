@@ -25,6 +25,6 @@ class MainModule {
 
     @Provides
     @Singleton
-    fun getMyRoomDataBase(@ApplicationContext appContext: Context) = MyDataBase.getDatabase(appContext)
+    fun getMyRoomDataBase(@ApplicationContext appContext: Context) : MyDataBase = MyDataBase.getDatabase(appContext)
 
 }

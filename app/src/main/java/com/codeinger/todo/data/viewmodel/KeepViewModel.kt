@@ -4,12 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.codeinger.todo.data.model.Keep
+import com.codeinger.todo.data.repository.KeepRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 @HiltViewModel
-class KeepRepository @Inject constructor(var keepRepository: KeepRepository): ViewModel() {
+class KeepViewModel @Inject constructor(var keepRepository: KeepRepository): ViewModel() {
 
     val readAllData: LiveData<List<Keep>> = keepRepository.readAllData
 
@@ -35,7 +36,7 @@ class KeepRepository @Inject constructor(var keepRepository: KeepRepository): Vi
 
     fun deleteAllKeep(){
         viewModelScope.launch(Dispatchers.IO) {
-            keepRepository.deleteAllKeep()
+            keepRepository.deleteAllKeeps()
         }
     }
 

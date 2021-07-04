@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codeinger.todo">
 
-
     <application
         android:name=".uitls.Baseclass"
         android:allowBackup="true"
@@ -11,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDo">
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name=".ui.main.KeepActivity"></activity>
+        <activity android:name=".ui.main.CategoryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
