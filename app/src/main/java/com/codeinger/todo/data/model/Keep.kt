@@ -16,7 +16,7 @@ import javax.annotation.PropertyKey
 ))
 data class Keep(
 
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
     var Kid : Int,
     var title : String,
     var description : String,

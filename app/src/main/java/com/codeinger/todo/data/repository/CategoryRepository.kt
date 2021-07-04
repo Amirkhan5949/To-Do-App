@@ -21,7 +21,7 @@ class CategoryRepository @Inject constructor(private val categoryDao: CaregoryDa
     }
 
     suspend fun deleteAllCategories(){
-        categoryDao.deleteAllCAtegories()
+        categoryDao.deleteAllCategories()
     }
 
 

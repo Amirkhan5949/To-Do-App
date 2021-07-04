@@ -1,4 +1,4 @@
-package com.codeinger.todo.data.room.dao
+    package com.codeinger.todo.data.room.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -19,9 +19,9 @@ interface KeepDao {
     @Query("DELETE FROM Keep")
     suspend fun deleteAllKeeps(): Int
 
-    @Query("SELECT * FROM Keep Where Cid =:Cid")
-    fun getAllParticularKeep (Cid : Int)
+    @Query("SELECT * FROM Keep Where Cid = :Cid")
+      fun getAllParticularKeep (Cid : Int) : List<Keep>
 
     @Query("SELECT * FROM Keep ORDER BY kid ASC")
-    fun readAllData(): LiveData<List<Keep>>
+      fun readAllData(): LiveData<List<Keep>>
 }

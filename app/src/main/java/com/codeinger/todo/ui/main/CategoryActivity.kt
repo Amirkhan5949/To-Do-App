@@ -8,7 +8,10 @@ import com.codeinger.todo.R
 import com.codeinger.todo.databinding.ActivityMainBinding
 import com.codeinger.todo.ui.fragment.AddCategoryFragment
 import com.codeinger.todo.ui.fragment.CategoryListFragment
+import com.codeinger.todo.uitls.Type
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -22,7 +25,7 @@ class CategoryActivity : AppCompatActivity() {
 
 
         binding.llAddCategory.setOnClickListener {
-            replaceFragment(AddCategoryFragment(),"AddCategoryFragment")
+             replaceFragment(AddCategoryFragment.newInstance(Type.ADD,null),"AddCategoryFragment")
 
         }
 
