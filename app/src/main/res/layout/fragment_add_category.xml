@@ -1,73 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
      xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragment.AddCategoryFragment">
+    tools:context=".ui.fragment.category.AddCategoryFragment">
 
-    <TextView
-        android:layout_marginLeft="20dp"
-        fontPath="fonts/nunito_light.ttf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Category Name"
-        tools:ignore="MissingPrefix" />
-
-
-    <EditText
-        android:padding="10dp"
-         android:singleLine="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/btn_border"
-        android:layout_marginHorizontal="20dp"
+    <LinearLayout
+        android:id="@+id/llmain"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/back"
+                    android:id="@+id/back"
+                    app:tint="@color/colorAccent" />
+
+                <TextView
+                    android:layout_marginRight="52dp"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text="Add Category"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"/>
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Category Name"
+            tools:ignore="MissingPrefix" />
+
+
+        <EditText
+            android:padding="10dp"
+            android:singleLine="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_border"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Category Name"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:id="@+id/et_name"
+            android:textColorHint="#a4a8ad"/>
+
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Category description"
+            tools:ignore="MissingPrefix" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Category Description"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:background="@drawable/btn_border"
+            android:textColor="#000000"
+            android:id="@+id/et_description"
+            android:textColorHint="#a4a8ad"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/btn_Done"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_Bar"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="Enter Category Name"
-        android:textSize="14sp"
-        android:textColor="#000000"
-        android:id="@+id/et_name"
-        android:textColorHint="#a4a8ad"/>
-
-
-    <TextView
-        android:layout_marginLeft="20dp"
-        fontPath="fonts/nunito_light.ttf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Category description"
-        tools:ignore="MissingPrefix" />
-
-    <EditText
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Category Description"
-        android:textSize="14sp"
-        android:padding="10dp"
-        android:background="@drawable/btn_border"
-        android:textColor="#000000"
-        android:id="@+id/et_description"
-        android:textColorHint="#a4a8ad"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Done"
-        android:id="@+id/btn_Done"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_background"
-        android:textSize="20dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="40dp"/>
+        android:indeterminate = "true"
+        android:max="100"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:progress="0" />
 
 
 
-
-</LinearLayout>
+</RelativeLayout>

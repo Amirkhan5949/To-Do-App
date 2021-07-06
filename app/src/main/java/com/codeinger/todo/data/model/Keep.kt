@@ -1,11 +1,11 @@
 package com.codeinger.todo.data.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-import java.sql.Time
+import kotlinx.android.parcel.Parcelize
 import java.util.*
-import javax.annotation.PropertyKey
 
 
 @Entity(foreignKeys = arrayOf(
@@ -14,13 +14,14 @@ import javax.annotation.PropertyKey
     childColumns = arrayOf("Cid"),
     onDelete = ForeignKey.CASCADE)
 ))
+@Parcelize
 data class Keep(
 
     @PrimaryKey(autoGenerate = true)
-    var Kid : Int,
-    var title : String,
-    var description : String,
-//    var date : Date,
-//    var time : Time,
-    var Cid : Int
-)
+    var Kid: Int,
+    var title: String,
+    var description: String,
+    var event : String,
+    var date: Calendar,
+     var Cid: Int
+):Parcelable

@@ -4,8 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.codeinger.todo.data.model.Category
 import com.codeinger.todo.data.model.Keep
+import com.codeinger.todo.data.room.converter.CalenderConverter
+import com.codeinger.todo.data.room.converter.Converters
 import com.codeinger.todo.data.room.dao.CaregoryDao
 import com.codeinger.todo.data.room.dao.KeepDao
 
@@ -13,6 +16,8 @@ import com.codeinger.todo.data.room.dao.KeepDao
 [Category::class,Keep::class],
     version = 1,
     exportSchema = false)
+@TypeConverters(CalenderConverter::class)
+
 
 abstract class MyDataBase : RoomDatabase() {
 

@@ -17,13 +17,14 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:layout_marginBottom="5dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
 
             <TextView
-                android:layout_marginBottom="5dp"
                 android:id="@+id/name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 tools:text="Category name"
@@ -33,10 +34,9 @@
                 android:layout_height="wrap_content"/>
 
             <ImageView
-                android:paddingHorizontal="10dp"
-                android:id="@+id/options"
-                android:layout_width="20dp"
-                android:layout_height="match_parent"
+                 android:id="@+id/options"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginHorizontal="20dp"
                 android:background="@drawable/more" />
 

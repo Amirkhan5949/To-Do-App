@@ -1,6 +1,7 @@
 package com.codeinger.todo.ui.adapter
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.codeinger.todo.R
 import com.codeinger.todo.data.model.Category
 import com.codeinger.todo.databinding.CategoryllistBinding
+import com.codeinger.todo.ui.main.KeepActivity
 import kotlinx.android.synthetic.main.categoryllist.view.*
 
 class CategoryListAdapter(
@@ -36,8 +38,9 @@ class CategoryListAdapter(
         }
 
         holder.itemView.ll_item.setOnClickListener {
-//            val intent = Intent(holder.itemView.context, KeepActivity::class.java)
-//            holder.itemView.context.startActivity(intent)
+            val intent = Intent(holder.itemView.context, KeepActivity::class.java)
+            intent.putExtra("Cid",currentItem.Cid)
+            holder.itemView.context.startActivity(intent)
         }
     }
 

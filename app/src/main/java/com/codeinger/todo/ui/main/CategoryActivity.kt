@@ -1,13 +1,12 @@
 package com.codeinger.todo.ui.main
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.codeinger.todo.R
 import com.codeinger.todo.databinding.ActivityMainBinding
-import com.codeinger.todo.ui.fragment.AddCategoryFragment
-import com.codeinger.todo.ui.fragment.CategoryListFragment
+import com.codeinger.todo.ui.fragment.category.AddCategoryFragment
+import com.codeinger.todo.ui.fragment.category.CategoryListFragment
 import com.codeinger.todo.uitls.Type
 import dagger.hilt.android.AndroidEntryPoint
 
